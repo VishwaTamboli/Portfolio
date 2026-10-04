@@ -39,6 +39,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <Script id="reset-scroll-on-reload" strategy="beforeInteractive">
+                {`if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; if (!location.hash) window.scrollTo(0, 0);`}
+            </Script>
             <GoogleAnalytics gaId="G-MHLY1LNGY5" />
             <Script id="hotjar" strategy="afterInteractive">
                 {`(function(h,o,t,j,a,r){
